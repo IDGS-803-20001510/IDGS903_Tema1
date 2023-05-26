@@ -1,0 +1,12 @@
+﻿@model IDGS903_Tema_1.Views.Distancia2P.Distancia2P
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultado</h2>
+
+<div class="col-lg-6">
+    <h1 style="color: red;">El resultado es: @Html.DisplayFor(mode => Model.res)</h1>
+    @Html.ActionLink("Regresar", "Index")
+</div>

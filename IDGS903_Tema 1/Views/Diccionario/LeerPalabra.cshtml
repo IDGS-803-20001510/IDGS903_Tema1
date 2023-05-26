@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "LeerPalabra";
+}
+
+<h2>LeerPalabra</h2>
+<div class="text-center">
+    <h2 style="color: blue;">Palabras Registradas</h2>
+    <table class="table table-bordered border-primary">
+        <thead>
+            <tr>
+                <th>Ingles</th>
+                <th>Español</th>
+            </tr>
+        </thead>
+        @foreach (var item in ViewBag.Diccionario)
+        {
+            <tbody>
+                <tr>
+                    @foreach (string datos in item.Split('='))
+                    {
+                        <th>@datos</th>
+                    }
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>
+<div>
+    @Html.ActionLink("Guardar", "Guardar")
+    @Html.ActionLink("Traductor", "Traductor")
+</div>
+
